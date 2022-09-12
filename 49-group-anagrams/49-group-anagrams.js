@@ -4,16 +4,18 @@
  */
 var groupAnagrams = function(strs) {
     var output = {};
+    var copy = [];
     
-   for (let str of strs) {
+   for (var i = 0; i<strs.length; i++) {
        
-    let key = str.split('').sort().join('');
+    copy[i] = strs[i].split('').sort().join('');
     
-    output[key] ? output[key].push(str) : output[key] = [str]
+    output[copy[i]] ? output[copy[i]].push(strs[i]) : output[copy[i]] = [strs[i]]
 
    }
     
     return Object.values(output);
+    
     //create copy of input strs
     //split each element in strs to array
     //sort each array by alphabetical order
