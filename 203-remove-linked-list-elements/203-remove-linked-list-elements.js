@@ -12,7 +12,7 @@
  */
 var removeElements = function(head, val) {
 
-    let dummy = new ListNode(-101);
+    let dummy = new ListNode(null);
     dummy.next = head;
     let current = dummy;
     
